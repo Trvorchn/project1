@@ -8,6 +8,9 @@ final int GAMEOVER = 4;
 final int TRANSITION = 5;
 final int GAMEMODE = 6;
 
+
+
+
 // color palette ===========================
 color lime = #D1F2A5;
 color red = #F56991;
@@ -16,23 +19,45 @@ color blue = #008DDA;
 color turq = #97E7E1;
 color gold = #FFC94A;
 color yellow = #EFFAB4;
+color tan = #D2B48C;
+color green = #D1F2B9;
 
-/// shades =================================
-color white = #FFFFFF;
+  /// shades =================================
+  color white = #FFFFFF;
 color black = #000000;
 color grey  = #B5C0D0;
+
 
 
 
 //transitions
 int count;
 int TRANSITIONMODE;
+
+
 // fonts
 PFont jerseyF;
-//game mode player amount 
+
+
+//game mode player amount
 boolean AI;
 
+
+
+
 //GIF
-PImage[] moneyGif;
-int currentPic = 0;
-String leadingZeroes = "0";
+PImage[] gif;
+int numberOfFrames;
+int f;
+
+//entity variables
+float px, py, pd; // paddles
+float bx, by, bd;//ball
+
+
+//keyboard variables =======================
+boolean akey, dkey;
+
+
+// target variables=========================
+float vx, vy; //target velocity

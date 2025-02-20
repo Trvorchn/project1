@@ -1,19 +1,49 @@
 
+
+
 void setup() {
   size(800, 800);
+  mode = GAME;
   
-    moneyGif = new PImage [121];
-  int index = 0;
-  while (index < 121) {
-    moneyGif[index] = loadImage("img("+index+").gif");
-  index++;  
+  
+  rectMode(CENTER);
+  textAlign(CENTER, CENTER);
+  noStroke();
+
+  
+  
+  
+  // loop for gifs
+  numberOfFrames = 121;
+  gif = new PImage[numberOfFrames];
+ 
+  int i = 0;
+  while (i < numberOfFrames) {
+    gif[i] = loadImage("img ("+ (i+1) +").gif");
+    i++;
+  }
+  
+  
+  //paddle
+  px = width/2;
+  py = height-50;
+  pd = 100;
+  
+  
+  //movement intialization
+  vx = 0;
+  vy = 5;
+
+  
+  
 } 
 
-  imageMode(CENTER);
-  textAlign(CENTER, CENTER);
-  rectMode(CENTER);
-  mode = INTRO;
-}
+
+
+
+
+
+
 void draw() {
 
   
@@ -23,14 +53,14 @@ void draw() {
     intro();
   } else if (mode == GAME) {
     game();
-  } else if (mode ==PAUSE) {
+  } else if (mode == PAUSE) {
     pause();
   } else if (mode ==  GAMEOVER) {
     gameover();
   } else if (mode == TRANSITION) {
     transition();
-  } else if (mode == GAMEMODE) {
-    gamemode();
+  //} else if (mode == GAMEMODE) {
+  //  gamemode();
   } else {
     println("Mode error: " + mode);
   }
