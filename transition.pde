@@ -4,8 +4,9 @@ void transition() {
   } else {
     count = count + 1;
     noStroke();
-    fill(black, 10);
+    fill(black, 15);
     rect(400, 400, 800, 800);
+    fill(white);
     text("CATCH THE MONEY", 400, 400);
   }
   if (TRANSITIONMODE == GAMEMODE) {

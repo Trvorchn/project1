@@ -38,6 +38,8 @@ fill(black);
 triangle(px ,py+20,px-30,py+75,px-55,py);
 triangle(px ,py+20,px+30,py+75,px+55,py);
 
+fill(red);
+
 //eyes
 fill(green);
 circle(px-20,py-20,10);
