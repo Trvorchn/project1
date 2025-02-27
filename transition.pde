@@ -7,7 +7,7 @@ void transition() {
     fill(black, 15);
     rect(400, 400, 800, 800);
     fill(white);
-    text("CATCH THE MONEY", 400, 400);
+    text("EARN THAT RAISE!!!", 400, 400);
   }
   if (TRANSITIONMODE == GAMEMODE) {
     fill(red);
