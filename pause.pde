@@ -1,7 +1,7 @@
 void pause () {
   fill(red);
   textSize(150);
-  text("PAUSE", 400, 400);
+  text("PAUSED", 400, 400);
 
   tactileR(400-275/2, 400+275/2, 500-75/2, 500+75/2);
   textSize(50);

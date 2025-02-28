@@ -1,9 +1,9 @@
 void gameover() {
-
+background(black);
   fill(white);
   tactileR(300, 500, 550, 650);
   rect(400, 600, 200, 100);
-  fill(lime);
+  fill(black);
   textSize(50);
   text("HOME", 400, 600);
 }

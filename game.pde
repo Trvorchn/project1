@@ -10,9 +10,23 @@ void game() {
   paddleMech();
   money();
   boss();
+  scoreboard();
 
 
 
+
+  // lives
+  if (moneyY > 800) {
+    lives--;
+    println(lives);
+
+  }
+  if (lives < 0){
+  mode = GAMEOVER;
+  }
+  
+  
+  
   // Check for catching money
   if (moneyY > py - playerSize +150 && moneyX > px - playerSize +150 &&  moneyX < px + playerSize -150) {
     score++;
@@ -23,11 +37,21 @@ void game() {
   }
 }
 
+
+
+
+
+
 void gameClicks() {
   if (mouseX > 300 && mouseX < 400 && mouseY > 25 && mouseY < 75 ) {
     mode = PAUSE;
   }
 }
+
+
+
+
+
 void paddleMech() {
 
 
@@ -39,11 +63,23 @@ void paddleMech() {
   if (dkey == true) {
     px = px + playerSpeed;
   }
+  
+    px = constrain(px, playerSize /4, width - playerSize / 4);
 }
+
+
+
 
 void paddle() {
   character();
 }
+
+
+
+
+
+
+
 
 void character() {
   //drawing person
@@ -88,6 +124,11 @@ void spawnMoney() {
 }
 
 
+
+
+
+
+
 void boss() {
   //drawing person
   fill(tan);
@@ -109,4 +150,25 @@ void boss() {
   fill(black);
   triangle(moneyX, 40, moneyX-55, 65, moneyX-38, -5);
   triangle(moneyX, 40, moneyX+55, 65, moneyX+38, -5);
+}
+
+
+
+
+
+
+
+void scoreboard(){
+  // Display score
+  fill(255);
+  textSize(20);
+  text("Score:" + score, 40, 30);
+  text("Lives:" + lives, 100, 750);
+  text("Highscore:" + highscore, 730, 30);
+
+  // highscore
+  if (score > highscore) {
+    highscore = score;
+  }
+
 }

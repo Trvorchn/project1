@@ -1,33 +1,24 @@
 void intro() {
   background(white);
 
-  
-  
-  
-   // gif
+  reset();
+
+
+
+  // gif
 
   image(gif[f], 0, 0, width, height);
   f= f + 1;
   if (f == numberOfFrames) f = 0;
 
-  
-  
-  
-  
-  
-  
- 
+
+
+
   fill(255);
   strokeWeight(5);
-
-
-
-
-  //x = width/2;
-  //y = height/2;
-
-
-
+  
+  
+  
 
   //start button
   tactileR(300, 500, 450, 550);
@@ -52,4 +43,8 @@ void introClicks () {
     mode = TRANSITION;
     TRANSITIONMODE = GAME;
   }
+}
+void reset() {
+  score = 0;
+  lives = 3;
 }

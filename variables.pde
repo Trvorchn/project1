@@ -64,5 +64,8 @@ float moneySpeed = 12;
 float moneySize = 30;
 // Score
 int score = 0;
-
+int highscore;
+//image
 PImage img;
+// lives
+int lives = 3;

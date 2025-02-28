@@ -3,14 +3,13 @@
 
 void setup() {
   size(800, 800);
-  mode = GAME ;
+  mode = INTRO ;
 
 
   rectMode(CENTER);
   textAlign(CENTER, CENTER);
   noStroke();
-
-
+ 
 
 
   // loop for gifs
