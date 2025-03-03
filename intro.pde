@@ -1,5 +1,5 @@
 void intro() {
-  background(white);
+  background(black);
 
   reset();
 

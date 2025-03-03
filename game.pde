@@ -2,7 +2,7 @@ void game() {
 
   background(grey);
 
-
+  
   img = loadImage("office.jpg");
   img.resize(800, 800);
   image(img, 0, 0);
@@ -12,16 +12,22 @@ void game() {
   boss();
   scoreboard();
 
+  pauseBut();
 
 
 
-  // lives
-  if (moneyY > 800) {
-    lives--;
-    println(lives);
+if (moneyY > 800 && !moneyMissed) {
+    lives= lives - 1;
+    moneyMissed = true;  
+}
 
-  }
-  if (lives < 0){
+if (moneyY > height + 50) {
+    spawnMoney();
+    moneyMissed = false;  
+}
+
+
+  if (lives <= 0){
   mode = GAMEOVER;
   }
   
@@ -43,11 +49,22 @@ void game() {
 
 
 void gameClicks() {
-  if (mouseX > 300 && mouseX < 400 && mouseY > 25 && mouseY < 75 ) {
+  if (mouseX > 12.5 && mouseX < 87.5 && mouseY > 382.5 && mouseY < 417.5 ) {
     mode = PAUSE;
   }
 }
-
+void pauseBut(){
+  tactileR(12.5,87.5,382.5,417.5);
+  fill(white);
+  rect(50,400,75,35);
+  fill(black);
+  textSize(20);
+  text("PAUSE",50,400);
+  noStroke();
+  
+  
+  
+}
 
 
 

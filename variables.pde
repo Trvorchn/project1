@@ -69,3 +69,4 @@ int highscore;
 PImage img;
 // lives
 int lives = 3;
+boolean moneyMissed = false;

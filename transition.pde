@@ -13,10 +13,12 @@ void transition() {
     fill(red);
     textSize(200);
     text("PICK", 400, 400);
-  } else if (TRANSITIONMODE==GAMEOVER) {
-    fill(red);
-    textSize(200);
-    text("FINISH", 400, 400); // who wins??????????????????
+  } 
+  
+  if (TRANSITIONMODE==GAMEOVER) {
+    fill(white);
+    textSize(75);
+    text("YOU'RE FIRED!!!", 400, 400);
     textSize(50);
    
   }
