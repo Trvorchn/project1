@@ -70,3 +70,10 @@ PImage img;
 // lives
 int lives = 3;
 boolean moneyMissed = false;
+//sounds
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;

@@ -1,6 +1,9 @@
 void intro() {
   background(black);
-
+  fill(white);
+  textSize(150);
+  text("CASH CLIMB",400,300);
+  noFill();
   reset();
 
 
