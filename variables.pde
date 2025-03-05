@@ -77,3 +77,6 @@ import ddf.minim.effects.*;
 import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
+
+Minim minim;
+AudioPlayer money,theme,lose,intro;

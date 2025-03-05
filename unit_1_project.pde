@@ -31,6 +31,22 @@ void setup() {
   //movement intialization
   vx = 0;
   vy = 5;
+  
+  
+  
+  
+  //minim intialization
+  minim = new Minim(this);
+  theme = minim.loadFile ("helpline.mp3");
+  lose = minim.loadFile ("hellnaw.mp3");
+  intro = minim.loadFile ("officetheme.mp3");
+  money = minim.loadFile ("money.mp3");
+  
+  
+  
+  
+  
+  
 }
 
 

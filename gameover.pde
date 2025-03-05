@@ -1,4 +1,9 @@
 void gameover() {
+
+ theme.pause();
+ 
+ lose.play();
+  
 background(black);
   fill(white);
   tactileR(300, 500, 550, 650);

@@ -1,8 +1,9 @@
 void game() {
-
+  intro.pause();
+  theme.play();
   background(grey);
 
-  
+
   img = loadImage("office.jpg");
   img.resize(800, 800);
   image(img, 0, 0);
@@ -16,27 +17,29 @@ void game() {
 
 
 
-if (moneyY > 800 && !moneyMissed) {
+  if (moneyY > 800 && !moneyMissed) {
     lives= lives - 1;
-    moneyMissed = true;  
-}
-
-if (moneyY > height + 50) {
-    spawnMoney();
-    moneyMissed = false;  
-}
-
-
-  if (lives <= 0){
-  mode = GAMEOVER;
+    moneyMissed = true;
   }
-  
-  
-  
+
+  if (moneyY > height + 50) {
+    spawnMoney();
+    moneyMissed = false;
+  }
+
+
+  if (lives <= 0) {
+    mode = GAMEOVER;
+  }
+
+
+
   // Check for catching money
   if (moneyY > py - playerSize +150 && moneyX > px - playerSize +150 &&  moneyX < px + playerSize -150) {
     score++;
     spawnMoney();
+    money.rewind();
+    money.play();
   }
   if (moneyY > height + 50) {
     spawnMoney();
@@ -53,17 +56,14 @@ void gameClicks() {
     mode = PAUSE;
   }
 }
-void pauseBut(){
-  tactileR(12.5,87.5,382.5,417.5);
+void pauseBut() {
+  tactileR(12.5, 87.5, 382.5, 417.5);
   fill(white);
-  rect(50,400,75,35);
+  rect(50, 400, 75, 35);
   fill(black);
   textSize(20);
-  text("PAUSE",50,400);
+  text("PAUSE", 50, 400);
   noStroke();
-  
-  
-  
 }
 
 
@@ -80,8 +80,8 @@ void paddleMech() {
   if (dkey == true) {
     px = px + playerSpeed;
   }
-  
-    px = constrain(px, playerSize /4, width - playerSize / 4);
+
+  px = constrain(px, playerSize /4, width - playerSize / 4);
 }
 
 
@@ -175,7 +175,7 @@ void boss() {
 
 
 
-void scoreboard(){
+void scoreboard() {
   // Display score
   fill(255);
   textSize(20);
@@ -187,5 +187,4 @@ void scoreboard(){
   if (score > highscore) {
     highscore = score;
   }
-
 }

@@ -1,4 +1,7 @@
 void intro() {
+  
+  intro.play();
+  
   background(black);
   fill(white);
   textSize(150);
